@@ -1,0 +1,17 @@
+{
+  "moduleNameMapper": {
+    "^@Contract/(.*)$": "<rootDir>/src/contract/$1",
+    "^@Db/(.*)$": "<rootDir>/src/prisma/$1"
+  },
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": "../",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  }
+}

@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "f3838743-8515-4ace-b323-e405d6240690",
+		"name": "ACL-Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6634343"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/contract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clientName\": \"Chuck\",\n    \"initialDate\": \"2024-08-16T00:00:00Z\",\n    \"email\": \"chuck@gmail.com\",\n    \"accountNumber\": \"562-346-600\",\n    \"amount\": 9000,\n    \"currency\": \"USD\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/contract",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contract"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"clientName\": \"Chuck\",\n    \"initialDate\": \"2024-08-16T00:00:00Z\",\n    \"email\": \"chuck@gmail.com\",\n    \"accountNumber\": \"562-346-600\",\n    \"amount\": 9000,\n    \"currency\": \"USD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/contract",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contract"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9d-WER4InQbfzngRHj1glBGJ/vjfeU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Aug 2024 22:17:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"clientName\": \"Chuck\",\n    \"email\": \"chuck@gmail.com\",\n    \"initialDate\": \"2024-08-16T00:00:00.000Z\",\n    \"accountNumber\": \"562-346-600\",\n    \"amount\": 9000,\n    \"currency\": \"USD\"\n}"
+				},
+				{
+					"name": "fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"clientName\": \"Chuck\",\n    \"initialDate\": \"2024-08-16T00:00:00Z\",\n    \"email_\": \"chuck@gmail.com\",\n    \"accountNumber\": \"562-346-600\",\n    \"amount\": 9000,\n    \"currency\": \"USD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/contract",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contract"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "143"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8f-5vvPyQtQIvAkf7uD6duqga6jnUc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Aug 2024 03:32:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": [\n        \"email must be an email\",\n        \"email should not be empty\",\n        \"initialDate must be a Date instance\"\n    ],\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/contractList?accountNumber=00-0547-443",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/contractList?accountNumber=00-0547-443",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contractList"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "00-0547-443"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/contractList?accountNumber=00-0547-443",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contractList"
+							],
+							"query": [
+								{
+									"key": "accountNumber",
+									"value": "00-0547-443"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "343"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"157-7j4HApHK1cGTLfxG1T6W5X5gI8c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Aug 2024 01:05:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"clientName\": \"Jane Smith\",\n        \"email\": \"jane.smith@example.com\",\n        \"initialDate\": \"2024-08-01T14:30:00.000Z\",\n        \"accountNumber\": \"00-0547-443\",\n        \"amount\": 200000,\n        \"currency\": \"EUR\"\n    },\n    {\n        \"id\": 5,\n        \"clientName\": \"Bob Brown\",\n        \"email\": \"bob.brown@example.com\",\n        \"initialDate\": \"2024-08-08T16:45:00.000Z\",\n        \"accountNumber\": \"00-0547-443\",\n        \"amount\": 250000,\n        \"currency\": \"USD\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
