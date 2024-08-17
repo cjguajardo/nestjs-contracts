@@ -2,6 +2,16 @@
 
 Microservicio en nodejs que crea y obtiene contratos desde una base de datos pgsql.
 
+## Configurar variables de entorno
+  
+```bash
+DATABASE_URL="postgresql://acl_user:123456.acl@database:5432/acl_contracts?schema=public"
+
+POSTGRES_DB="acl_contracts"
+POSTGRES_USER="acl_user"
+POSTGRES_PASSWORD="123456.acl"
+```
+
 ## Correr con Docker
 
 ```bash
